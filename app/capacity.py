@@ -1,20 +1,30 @@
 
+def _require_positive(
+    value: int,
+    name: str
+) -> None:
+    """Vérifie qu'une valeur est positive."""
+
+    if value <= 0:
+        raise ValueError(
+            f"{name} doit être strictement positif"
+        )
+
+
 def can_reserve_room(
     participants: int,
     capacity: int
 ) -> bool:
+    """Vérifie la capacité d'une salle."""
 
-    if participants <= 0:
-        raise ValueError(
-            "Le nombre de participants doit être positif"
-        )
+    _require_positive(
+        participants,
+        "participants"
+    )
 
-    if capacity <= 0:
-        raise ValueError(
-            "La capacité doit être positive"
-        )
+    _require_positive(
+        capacity,
+        "capacity"
+    )
 
-    if participants <= capacity:
-        return True
-
-    return False
+    return participants <= capacity
