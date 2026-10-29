@@ -1,5 +1,9 @@
+
 def can_reserve_room(
     participants: int,
-    capacity: int,
+    capacity: int
 ) -> bool:
-    raise NotImplementedError
+
+    raise NotImplementedError(
+        "La règle métier n'est pas encore implémentée"
+    )
