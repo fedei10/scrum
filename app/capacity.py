@@ -4,6 +4,17 @@ def can_reserve_room(
     capacity: int
 ) -> bool:
 
-    raise NotImplementedError(
-        "La règle métier n'est pas encore implémentée"
-    )
+    if participants <= 0:
+        raise ValueError(
+            "Le nombre de participants doit être positif"
+        )
+
+    if capacity <= 0:
+        raise ValueError(
+            "La capacité doit être positive"
+        )
+
+    if participants <= capacity:
+        return True
+
+    return False
