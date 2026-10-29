@@ -1,0 +1,22 @@
+% Proposition de fragment LaTeX pour le Chapitre 3.
+% À adapter après vérification de l'exécution CI sur GitHub.
+\subsection{Préparation technique de l'expérimentation}
+
+Afin de disposer d'un support reproductible pour l'étude des pratiques XP,
+nous avons retenu un kata de gestion de réunions. La première étape consiste
+à préparer une mini-API FastAPI et un test automatisé de disponibilité.
+Les règles métier de réservation, en particulier la validation de la
+capacité d'une salle, constituent le périmètre des itérations expérimentales
+à venir.
+
+La Definition of Done technique prévoit des critères d'acceptation explicites,
+des tests automatisés réussis, une revue de code et une intégration continue
+avec un résultat positif. Un workflow GitHub Actions est préparé pour
+exécuter les tests à chaque modification publiée ; sa réussite doit être
+attestée par les journaux d'exécution du dépôt, et non supposée.
+
+Le tableau initial du groupe comporte les colonnes \textit{Backlog},
+\textit{To Do}, \textit{Doing}, \textit{Test/Review} et \textit{Done}.
+Pour les itérations suivantes, nous proposons une limite WIP de deux tâches
+en \textit{Doing} et de deux tâches en \textit{Test/Review}. Il s'agit
+d'une règle d'amélioration proposée et non d'une limite déjà observée.
